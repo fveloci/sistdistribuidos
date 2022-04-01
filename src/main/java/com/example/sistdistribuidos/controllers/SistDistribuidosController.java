@@ -28,4 +28,17 @@ public class SistDistribuidosController {
 		String resultado = Float.toString(a - b);
 		return clienteRest.getForObject("https://mijavaresultadosfveloci.herokuapp.com/resultado/" + resultado , String.class);
 	}
+	
+	@GetMapping("/sumareuropa")
+	public String sumarEuropa(@RequestParam float a, @RequestParam float b) {
+		String resultado = Float.toString(a + b);
+		return clienteRest.getForObject("https://resultadoseuropafveloci.herokuapp.com/resultado/" + resultado , String.class);
+	}
+	@GetMapping("/restareuropa")
+	public String restarEuropa(@RequestParam float a, @RequestParam float b) {
+		String resultado = Float.toString(a - b);
+		return clienteRest.getForObject("https://resultadoseuropafveloci.herokuapp.com/resultado/" + resultado , String.class);
+	}
+	
+	
 }
