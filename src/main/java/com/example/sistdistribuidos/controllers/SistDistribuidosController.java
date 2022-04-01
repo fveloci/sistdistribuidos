@@ -15,6 +15,6 @@ public class SistDistribuidosController {
 	@GetMapping("/sumar")
 	public String sumar(@RequestParam float a, @RequestParam float b) {
 		String resultado = Float.toString(a + b);
-		return resultado;
+		return "El resultado es: " + resultado;
 	}
 }
