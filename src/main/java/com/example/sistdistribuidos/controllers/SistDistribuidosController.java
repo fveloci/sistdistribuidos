@@ -17,4 +17,10 @@ public class SistDistribuidosController {
 		String resultado = Float.toString(a + b);
 		return "El resultado es: " + resultado;
 	}
+	
+	@GetMapping("/restar")
+	public String restar(@RequestParam float a, @RequestParam float b) {
+		String resultado = Float.toString(a - b);
+		return "El resultado es: " + resultado;
+	}
 }
